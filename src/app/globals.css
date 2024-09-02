@@ -1,0 +1,160 @@
+
+/*  FONTS */
+
+.arsenal-sc-regular {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.arsenal-sc-bold {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.arsenal-sc-regular-italic {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+ 
+.arsenal-sc-bold-italic {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+  
+/* MAIN BODY */
+
+.main-body {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* NAVIGATION BAR | HOME BAR */
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navigation-img-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.staar-logo {
+    width: 80px;
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.group-name {
+    padding-left: 15px; 
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    margin-top: 30px;
+}
+
+.navigation-button-click-format {
+    padding-right: 45px;
+    font-size: 16px;
+}
+
+.home-button {
+
+}
+
+.professors-button {
+
+}
+
+.team-button {
+    
+}
+
+.research-button {
+
+}
+
+/* NAVIGATION BAR HOVER EFFECTS */
+
+.navigation-button-dropdown-format {
+    margin-right: 5px;
+    padding-left: 20px;
+}
+
+.navigation-button-dropdown-icon {
+    position: relative;
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+.navigation-button-dropdown-hover-box {
+    display: block;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.team-button:hover .team-button-hover{
+    opacity: 1;
+}
+
+/* MAIN CONTENT */
+
+.main-content-header {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+
+.home-welcome {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-welcome-text {
+    display: flex;
+    font-size: 19px;
+    font-weight: bold;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-welcome-rotating-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    
+
+}
+
+
+
+/* MEDIA QUERY | RESPONSIVE DESIGN*/
+
