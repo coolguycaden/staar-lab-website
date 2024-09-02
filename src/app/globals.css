@@ -28,18 +28,19 @@
 /* MAIN BODY */
 
 .main-body {
-    display: flex;
-    flex-direction: row;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 
 /* NAVIGATION BAR | HOME BAR */
 
 .navigation-bar {
+    background-color: rgb(90, 90, 90);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: -10px;
     padding: 0px;
     width: 100%;
     margin-bottom: 20px;
@@ -49,33 +50,41 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     
 }
 
 .staar-logo {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 80px;
     margin-top: 3px;
     margin-left: 3px;
 }
 
 .group-name {
     padding-left: 15px; 
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 200;
+    color: rgb(230, 131, 50);
+    font-weight: bold;
     font-size: 25px;
 }
 
 .navigation-buttons {
     display: flex;
     flex-direction: row;
-    width: 45%;
-    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 39%;
+    margin-top: 0px;
 }
 
 .navigation-button-click-format {
     padding-right: 45px;
     font-size: 16px;
+}
+
+.navigation-buttons a:link {
+    text-decoration: none;
+    color: rgb(230, 131, 50);
 }
 
 .home-button {
@@ -97,14 +106,17 @@
 /* NAVIGATION BAR HOVER EFFECTS */
 
 .navigation-button-dropdown-format {
-    margin-right: 5px;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 4px;
+    padding-right: 45px;
 }
 
 .navigation-button-dropdown-icon {
     position: relative;
-    padding-left: 5px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 0px;
+    height: 17px;
 }
 
 .navigation-button-dropdown-hover-box {

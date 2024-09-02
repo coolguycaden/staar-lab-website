@@ -1,8 +1,12 @@
+import React from "react";
+import { HomePageDescription, RotatingImageGallery, WelcomeText } from "./home/page";
+
 export default function HomePage() {
     return (
-        <div>
-            <h1>Home Page</h1>
-            <p>SMH</p>
-        </div>
+        <header className="">
+            <WelcomeText/>
+            <RotatingImageGallery/>
+            <HomePageDescription/>
+        </header>
     );
 }

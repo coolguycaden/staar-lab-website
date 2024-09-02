@@ -12,7 +12,8 @@ import { Arsenal } from 'next/font/google';
 import { authData } from './auth';
 import { pb } from './auth';
 
-const arsenal = Arsenal({
+//CREATE ARESENAL FONT
+const ARSENAL = Arsenal({
     subsets: ['latin'],
     display: 'swap',
     weight: "400",
@@ -20,9 +21,17 @@ const arsenal = Arsenal({
 })
 
 
-const websiteLogo = await pb.collection('assets').getList(1, 1, {
-  sort: '-created',
-});
+//FETCH LOGO FROM DATABASE
+
+const WEBSITE_LOGO_INFO = await pb.collection('assets').getOne('xk9pst3nshy18p2');
+
+export function getPocketbaseUrl(itemToGetUrl){
+  const API_URL = "http://127.0.0.1:8090/api/files/"
+  const pbUrl = API_URL + itemToGetUrl.collectionId + '/' + itemToGetUrl.id + '/' + itemToGetUrl.uploadedFile;
+  return pbUrl
+}
+
+const WEBSITE_LOGO = getPocketbaseUrl(WEBSITE_LOGO_INFO);
 
 
 export const metadata = {
@@ -32,13 +41,16 @@ export const metadata = {
 }
 
 
+//MAIN LAYOUT
 export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className='main-body'>
         <main>
-          <NavigationBar/>
+          <NavigationBar
+            websiteLogo = {WEBSITE_LOGO}          
+          />
           {children}
         </main>
       </body>
