@@ -1,26 +1,33 @@
 {
   "name": "staar-lab-website",
   "version": "0.1.0",
+  "homepage": "https://coolguycaden.github.io/staar-lab-website",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-pocketbase": "pocketbase serve",
+    "pre-predeploy": "npm run build",
+    "predeploy": "npm run pre-predeploy",
+    "start-pages": "gh-pages -d build",
+    "deploy": "start-pages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "next": "14.2.7",
-    "pocketbase": "^0.21.5",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "22.5.1",
     "@types/react": "18.3.5",
+    "gh-pages": "^6.1.1",
+    "next": "^14.2.8",
+    "pocketbase": "^0.21.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "5.5.4"

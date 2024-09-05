@@ -9,7 +9,7 @@ import { Arsenal } from 'next/font/google';
 
 
 //Import PocketBase requirements
-import { authData } from './auth';
+import { authData } from './auth.js';
 import { pb } from './auth';
 
 //CREATE ARESENAL FONT
@@ -40,6 +40,7 @@ export const metadata = {
   
 }
 
+export const HOME_PAGE_DESCRIPTION_INFO = await pb.collection('assets').getOne('02iw1b097xi8g0x');
 
 //MAIN LAYOUT
 export default function RootLayout({ children }) {

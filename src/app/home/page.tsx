@@ -1,17 +1,22 @@
 import React from "react";
-import { pb } from "../auth";
+import { pb } from "../auth.js";
 import PocketBase from 'pocketbase';
-import { getPocketbaseUrl } from "../layout";
+import { getPocketbaseUrl } from "../layout.js";
+import { HOME_PAGE_DESCRIPTION_INFO } from "../layout.js";
 
-export function WelcomeText(){
+function WelcomeText(){
     return (
-      <div></div>
+      <div>
+        <h1>Placeholder</h1>
+      </div>
     );
 }
   
-export function RotatingImageGallery(){
+function RotatingImageGallery(){
     return(
-      <div></div>
+      <div>
+        <h1>Placeholder</h1>
+      </div>
     );
 }
 
@@ -25,7 +30,7 @@ export function RotatingImageGallery(){
     'es2022', 'esnext', 'system', 'node16', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.
 
 */
-const HOME_PAGE_DESCRIPTION_INFO = await pb.collection('assets').getOne('02iw1b097xi8g0x');
+
 const HOME_PAGE_DESCRIPTION_FILE = getPocketbaseUrl(HOME_PAGE_DESCRIPTION_INFO);
 getHomePageDescription(HOME_PAGE_DESCRIPTION_FILE);
 
@@ -39,12 +44,19 @@ function getHomePageDescription(file){
       })
       .catch((e) => console.log(e));
 }
-  
 
-  
 export function HomePageDescription(){
     return (
       <text>{description}</text>
     );
 }
-  
+
+export default function HomePage(){
+  return (
+    <div>
+        <WelcomeText/>
+        <RotatingImageGallery/>
+        <HomePageDescription/>
+    </div>
+  );
+}
