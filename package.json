@@ -8,11 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start-pocketbase": "pocketbase serve",
-    "pre-predeploy": "npm run build",
-    "predeploy": "npm run pre-predeploy",
-    "start-pages": "gh-pages -d build",
-    "deploy": "start-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
