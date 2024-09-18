@@ -23,7 +23,7 @@
     "@types/node": "22.5.1",
     "@types/react": "18.3.5",
     "gh-pages": "^6.1.1",
-    "next": "^14.2.8",
+    "next": "^14.2.10",
     "pocketbase": "^0.21.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
