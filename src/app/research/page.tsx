@@ -1,3 +1,7 @@
+import React from "react";
+
 export default function ResearchPage() {
-    return <h1>ResearchPage</h1>
+    return (
+        <h1>ResearchPage</h1>
+    );
 }

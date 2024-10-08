@@ -9,8 +9,8 @@ import { Arsenal } from 'next/font/google';
 
 
 //Import PocketBase requirements
-import { authData } from './auth.js';
-import { pb } from './auth';
+//import { authData } from './auth.js';
+//import { pb } from './auth';
 
 //CREATE ARESENAL FONT
 const ARSENAL = Arsenal({
@@ -23,16 +23,21 @@ const ARSENAL = Arsenal({
 
 //FETCH LOGO FROM DATABASE
 
-const WEBSITE_LOGO_INFO = await pb.collection('assets').getOne('xk9pst3nshy18p2');
+// const WEBSITE_LOGO_INFO = await pb.collection('assets').getOne('xk9pst3nshy18p2');
 
-export function getPocketbaseUrl(itemToGetUrl){
-  const API_URL = "http://127.0.0.1:8090/api/files/"
-  const pbUrl = API_URL + itemToGetUrl.collectionId + '/' + itemToGetUrl.id + '/' + itemToGetUrl.uploadedFile;
-  return pbUrl
-}
+// export function getPocketbaseUrl(itemToGetUrl){
+//   const API_URL = "http://127.0.0.1:8090/api/files/"
+//   const pbUrl = API_URL + itemToGetUrl.collectionId + '/' + itemToGetUrl.id + '/' + itemToGetUrl.uploadedFile;
+//   return pbUrl
+// }
 
-const WEBSITE_LOGO = getPocketbaseUrl(WEBSITE_LOGO_INFO);
+//const WEBSITE_LOGO = getPocketbaseUrl(WEBSITE_LOGO_INFO);
 
+
+
+
+
+const WEBSITE_LOGO = "../assets/images/staar-lab-image.png"
 
 export const metadata = {
   title: 'STAAR LAB',
@@ -40,7 +45,8 @@ export const metadata = {
   
 }
 
-export const HOME_PAGE_DESCRIPTION_INFO = await pb.collection('assets').getOne('02iw1b097xi8g0x');
+//export const HOME_PAGE_DESCRIPTION_INFO = await pb.collection('assets').getOne('02iw1b097xi8g0x');
+//const HOME_PAGE_DESCRIPTION_INFO = 
 
 //MAIN LAYOUT
 export default function RootLayout({ children }) {

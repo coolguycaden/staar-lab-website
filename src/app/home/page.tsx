@@ -1,8 +1,9 @@
 import React from "react";
-import { pb } from "../auth.js";
-import PocketBase from 'pocketbase';
-import { getPocketbaseUrl } from "../layout.js";
-import { HOME_PAGE_DESCRIPTION_INFO } from "../layout.js";
+//import { pb } from "../auth.js";
+//import PocketBase from 'pocketbase';
+//import { getPocketbaseUrl } from "../layout.js";
+//import { HOME_PAGE_DESCRIPTION_INFO } from "../layout.js";
+//import readTextFromFile from "../universalFunctions.js";
 
 function WelcomeText(){
     return (
@@ -31,23 +32,13 @@ function RotatingImageGallery(){
 
 */
 
-const HOME_PAGE_DESCRIPTION_FILE = getPocketbaseUrl(HOME_PAGE_DESCRIPTION_INFO);
-getHomePageDescription(HOME_PAGE_DESCRIPTION_FILE);
-
-var description;
-  
-function getHomePageDescription(file){
-    fetch(file)
-      .then((res) => res.text())
-      .then((text) => {
-        description = text;
-      })
-      .catch((e) => console.log(e));
-}
-
-export function HomePageDescription(){
+//const HOME_PAGE_DESCRIPTION_FILE = getPocketbaseUrl(HOME_PAGE_DESCRIPTION_INFO);
+//const HOME_PAGE_DESCRIPTION_FILE = "../assets/content/home_page_text.txt"
+//const HOME_PAGE_DESCRIPTION_TEXT = "hi"//readTextFromFile(HOME_PAGE_DESCRIPTION_FILE);
+function HomePageDescription(){
     return (
-      <text>{description}</text>
+      <text>Hi</text>
+      //<text>{HOME_PAGE_DESCRIPTION_TEXT}</text>
     );
 }
 
